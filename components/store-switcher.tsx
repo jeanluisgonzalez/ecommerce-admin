@@ -1,7 +1,7 @@
 "use client";
 
 import { Store } from "@prisma/client";
-import { Store as StoreIcon } from "lucide-react";
+import { ChevronsUpDown, Store as StoreIcon } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -50,6 +50,8 @@ const StoreSwitcher = ({ className, items = [] }: StoreSwitcherProps) => {
           className={cn("w-[200px] justify-between", className)}
         >
           <StoreIcon className="mr-2 h-4 w-4" />
+          Current Store
+          <ChevronsUpDown className="ml-auto h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
     </Popover>
